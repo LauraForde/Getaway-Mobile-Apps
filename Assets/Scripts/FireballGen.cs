@@ -17,14 +17,16 @@ public class FireballGen : MonoBehaviour {
     void Start()
     {
         fireballWidth = theFireball.GetComponent<BoxCollider2D>().size.y;
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if(transform.position.x < genPoint.position.x)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (transform.position.x < genPoint.position.x)
         {
             distance = Random.Range(distanceMin, distanceMax);
-            transform.position = new Vector3(transform.position.x + fireballWidth + distance, transform.position.y,  transform.position.z);
+            transform.position = new Vector3(transform.position.x + fireballWidth + distance, transform.position.y, transform.position.z);
             // Instantiate(theFireball, transform.position, transform.rotation);
             GameObject newFireball = objPool.GetPooledObject();
 
@@ -32,5 +34,5 @@ public class FireballGen : MonoBehaviour {
             newFireball.transform.rotation = transform.rotation;
             newFireball.SetActive(true);
         }
-	}
+    }
 }

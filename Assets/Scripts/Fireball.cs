@@ -11,7 +11,7 @@ public class Fireball : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody2D>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,7 +20,13 @@ public class Fireball : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+
+        if(other.tag == "Person"){
+            FindObjectOfType<GameManager>().Hurt();
+        }
+
         Instantiate(fireEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
+

@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GroundPlatformGen.cs">
+    <Files>
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraContoller.cs" Line="21" Column="88" />
+      <File FileName="Assets\Scripts\FireballGen.cs" Line="13" Column="30" />
+      <File FileName="Assets\Scripts\RoofPlatformGen.cs" Line="5" Column="29" />
+      <File FileName="Assets\Scripts\GroundPlatformGen.cs" Line="13" Column="8" />
+      <File FileName="Assets\Scripts\Destroyer.cs" Line="15" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
