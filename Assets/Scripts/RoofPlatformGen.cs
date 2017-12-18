@@ -7,6 +7,7 @@ public class RoofPlatformGen : MonoBehaviour {
 	public GameObject platform;
 	public Transform genPoint;
 	private float width;
+	public ObjectPooler objPool;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,13 @@ public class RoofPlatformGen : MonoBehaviour {
 	void Update () {
 		if (transform.position.x < genPoint.position.x) {
 			transform.position = new Vector3 (transform.position.x + width, transform.position.y, transform.position.z);
-			Instantiate (platform, transform.position, transform.rotation);
+			//Instantiate (platform, transform.position, transform.rotation);
+
+			GameObject newRoof = objPool.GetPooledObject();
+
+			newRoof.transform.position = transform.position;
+			newRoof.transform.rotation = transform.rotation;
+			newRoof.SetActive (true);
 
 		}
 

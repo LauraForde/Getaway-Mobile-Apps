@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\RanPlatformGen.cs" />
      <Compile Include="Assets\Scripts\RoofPlatformGen.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
  <Reference Include="UnityEngine.UI">

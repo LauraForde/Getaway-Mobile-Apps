@@ -18,8 +18,8 @@ public class Destroyer : MonoBehaviour {
 
 		if (transform.position.x < destroyPoint.transform.position.x) {
 		
-			Destroy (gameObject);
-		
+			//Destroy (gameObject);
+			gameObject.SetActive(false);
 		}
 	}
 }
