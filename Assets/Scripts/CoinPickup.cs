@@ -7,7 +7,6 @@ public class CoinPickup : MonoBehaviour {
     public int scoreGive;
     private ScoreManager sManager;
 
-
     // Use this for initialization
 	void Start () {
         sManager = FindObjectOfType<ScoreManager>();

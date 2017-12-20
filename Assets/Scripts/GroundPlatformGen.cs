@@ -15,6 +15,9 @@ public class GroundPlatformGen : MonoBehaviour {
 	private int select;
 	private float[] pWidth;
 
+	private CoinGen coinGen;
+	public float randCoin;
+
 	// Use this for initialization
 	void Start () {
 		//width = platform.GetComponent<BoxCollider2D> ().size.x;
@@ -23,6 +26,8 @@ public class GroundPlatformGen : MonoBehaviour {
 		for(int i = 0; i < objPool.Length; i++){
 			pWidth [i] = objPool[i].pooledObject.GetComponent<BoxCollider2D> ().size.x;
 		}
+
+		coinGen = FindObjectOfType<CoinGen> ();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +44,10 @@ public class GroundPlatformGen : MonoBehaviour {
 			newPlat.transform.position = transform.position;
 			newPlat.transform.rotation = transform.rotation;
 			newPlat.SetActive (true);
+
+			if (Random.Range (0f, 50f) < randCoin) {
+				coinGen.CoinMaker (new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
+			}
 		}
 			
 	}

@@ -19,6 +19,8 @@ public class RanPlatformGen : MonoBehaviour {
 	private float maxHeight;
 	public float heightChange;
 	private float change;
+	private CoinGen coinGen;
+	public float randCoin;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +34,8 @@ public class RanPlatformGen : MonoBehaviour {
 
 		minHeight = transform.position.y;
 		maxHeight = max.position.y;
+
+		coinGen = FindObjectOfType<CoinGen> ();
 	}
 
 	// Update is called once per frame
@@ -56,6 +60,10 @@ public class RanPlatformGen : MonoBehaviour {
 			newPlat.transform.position = transform.position;
 			newPlat.transform.rotation = transform.rotation;
 			newPlat.SetActive (true);
+
+			if (Random.Range (0f, 50f) < randCoin) {
+				coinGen.CoinMaker (new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
+			}
 
 			transform.position = new Vector3 (transform.position.x + (pWidth[select] / 2), transform.position.y, transform.position.z);
 		}

@@ -1,16 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu.cs">
     <Files>
-      <File FileName="Assets\Scripts\RoofPlatformGen.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GroundPlatformGen.cs" Line="37" Column="40" />
-      <File FileName="Assets\Scripts\Destroyer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RanPlatformGen.cs" Line="29" Column="2" />
-      <File FileName="Assets\Scripts\ObjectPooler.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerController.cs" Line="69" Column="18" />
-      <File FileName="Assets\Scripts\ScoreManager.cs" Line="15" Column="30" />
-      <File FileName="Assets\Scripts\Fireball.cs" Line="25" Column="35" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="56" Column="30" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="9" Column="26" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ObjectPooler.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\CoinGen.cs" Line="7" Column="5" />
+      <File FileName="Assets\Scripts\GroundPlatformGen.cs" Line="15" Column="2" />
+      <File FileName="Assets\Scripts\RanPlatformGen.cs" Line="38" Column="3" />
+      <File FileName="Assets\Scripts\FireballGen.cs" Line="55" Column="71" />
+      <File FileName="Assets\Scripts\Fireball.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CoinPickup.cs" Line="23" Column="10" />
+      <File FileName="Assets\Scripts\Menu.cs" Line="12" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

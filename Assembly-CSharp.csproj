@@ -54,7 +54,6 @@
      <Compile Include="Assets\Scripts\CameraContoller.cs" />
      <Compile Include="Assets\Scripts\CoinGen.cs" />
      <Compile Include="Assets\Scripts\CoinPickup.cs" />
-     <Compile Include="Assets\Scripts\coinSpawn.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\Fireball.cs" />
      <Compile Include="Assets\Scripts\FireballGen.cs" />
