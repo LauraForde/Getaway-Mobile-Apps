@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Person
   - Coin
+  - Catcher
   layers:
   - Default
   - TransparentFX

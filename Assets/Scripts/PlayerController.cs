@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
     public bool ground;
 
     private Animator animator;
+	public GameManager manager;
+	public ScoreManager score;
 
     // Use this for initialization
     void Start () {
@@ -60,4 +62,11 @@ public class PlayerController : MonoBehaviour {
         animator.SetFloat("Speed", rigid.velocity.x);
         animator.SetBool("Grounded", ground);
     }
+
+	void OnCollisionEnter2D(Collision2D catcher){
+		if (catcher.gameObject.tag == "Catcher") {
+			manager.Restart ();
+			score.Hurt ();
+		}
+	}
 }

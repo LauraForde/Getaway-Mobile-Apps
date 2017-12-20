@@ -10,6 +10,9 @@ public class ScoreManager : MonoBehaviour {
 
     public float scoreCount;
     public float highCount;
+	public GameObject player;
+	public int pLife;
+	public GameObject[] pHearts;
 
 	// Use this for initialization
 	void Start () {
@@ -32,4 +35,17 @@ public class ScoreManager : MonoBehaviour {
     {
         scoreCount += score;
     }
+
+
+	public void Hurt(){
+		pLife -= 1;
+		for(int i = 0; i < pHearts.Length; i++){
+			if(pLife > i){
+				pHearts[i].SetActive(true);
+			}
+			else{
+				pHearts[i].SetActive(false);
+			}
+		}
+	}
 }

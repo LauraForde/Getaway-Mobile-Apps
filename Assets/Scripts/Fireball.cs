@@ -22,7 +22,7 @@ public class Fireball : MonoBehaviour {
     {
 
         if(other.tag == "Person"){
-            FindObjectOfType<GameManager>().Hurt();
+            FindObjectOfType<ScoreManager>().Hurt();
         }
 
         Instantiate(fireEffect, transform.position, transform.rotation);

@@ -10,13 +10,19 @@ public class GroundPlatformGen : MonoBehaviour {
 	private float width;
 	public float distanceMin;
 	public float distanceMax;
-	//public ObjectPooler objPool;
-	public GameObject[] randPlatform;
+	public ObjectPooler[] objPool;
+	//public GameObject[] randPlatform;
 	private int select;
+	private float[] pWidth;
 
 	// Use this for initialization
 	void Start () {
-		width = platform.GetComponent<BoxCollider2D> ().size.x;
+		//width = platform.GetComponent<BoxCollider2D> ().size.x;
+		pWidth = new float[objPool.Length];
+
+		for(int i = 0; i < objPool.Length; i++){
+			pWidth [i] = objPool[i].pooledObject.GetComponent<BoxCollider2D> ().size.x;
+		}
 	}
 	
 	// Update is called once per frame
@@ -24,17 +30,15 @@ public class GroundPlatformGen : MonoBehaviour {
 		if (transform.position.x < genPoint.position.x) {
 
 			distance = Random.Range (distanceMin, distanceMax);
-		
-			transform.position = new Vector3 (transform.position.x + width + distance, transform.position.y, transform.position.z);
+			select = Random.Range (0, objPool.Length);
+			transform.position = new Vector3 (transform.position.x + pWidth[select] + distance, transform.position.y, transform.position.z);
 
-			select = Random.Range (0, randPlatform.Length);
-
-			Instantiate (/*platform*/ select[, transform.position, transform.rotation);
-			/*GameObject newPlat = objPool.GetPooledObject();
+			//Instantiate (/*platform*/ objPool[select], transform.position, transform.rotation);
+			GameObject newPlat = objPool[select].GetPooledObject();
 
 			newPlat.transform.position = transform.position;
 			newPlat.transform.rotation = transform.rotation;
-			newPlat.SetActive (true);*/
+			newPlat.SetActive (true);
 		}
 			
 	}
